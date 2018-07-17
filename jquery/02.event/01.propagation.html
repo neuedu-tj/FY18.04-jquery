@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        #parent {
+            height: 200px;
+            width: 200px;
+            background-color: crimson;
+        }
+
+        #sub {
+            height: 50px;
+            width: 50px;
+            background-color: yellowgreen;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id="parent">
+        <div id="sub"></div>
+    </div>
+
+    <hr>
+
+
+    <a href="http://www.baidu.com" id="test">baidu</a>
+
+
+</body>
+</html>
+
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $(function() {
+
+        $("#parent").click(function() {
+            alert("parent")
+        })
+        $("#sub").click(function(e) {
+            alert("sub")
+            e.stopPropagation()
+        })
+
+        $("#test").click(function(e){
+
+            alert("test")
+            e.preventDefault();
+        })
+
+        $(document).click(function(e) {
+            e.preventDefault()
+            alert("瞎点" + e.button)
+            e.stopPropagation()
+        })
+
+        $(window).keydown(function(e){
+
+            console.log(e.keyCode)
+
+        })
+
+
+    })
+
+</script>
+

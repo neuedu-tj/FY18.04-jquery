@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Title</title>
 
 
     <style>
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
 
         * {
@@ -39,12 +44,22 @@
         #list {
             flex : 1;
             background-color: cornflowerblue;
+
+            overflow: scroll;
         }
 
         #menu {
             height: 60px;
             background-color: yellowgreen;
         }
+
+        .chat {
+            height: 40px;
+            width: 100%;
+            margin: 10px;
+            background-color: gold;
+        }
+
 
 
     </style>
@@ -61,7 +76,25 @@
 
         <div id="title"></div>
 
-        <div id="list"></div>
+        <div id="list">
+
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            <div class="chat"></div>
+            
+        </div>
 
         <div id="menu"></div>
 

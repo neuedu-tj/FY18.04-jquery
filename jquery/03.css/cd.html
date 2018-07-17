@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        #container {
+
+            width: 100px;
+            height: 100px;
+
+            box-shadow: 0px 0px 10px grey;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #cd {
+
+
+            width: 80px;
+            height: 80px;
+
+            background-image:url(../../resources/img/hlw.jpeg);
+          ;  background-size: cover;
+            background-position: center;
+
+            border-radius: 50%;
+
+
+
+        }
+
+        .play {
+
+            animation: play 5s linear infinite
+
+        }
+
+
+
+        @keyframes play {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="container">
+        <div id="cd"></div>
+    </div>
+    <hr>
+    <input id="play" type="button" value="play">
+    <input id="stop" type="button" value="stop">
+
+</body>
+</html>
+
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+    $(function(){
+
+        $("#play").click(function(){
+
+            $("#cd").addClass("play")
+
+        })
+
+        $("#stop").click(function(){
+
+            $("#cd").removeClass("play")
+
+        })
+
+
+    })
+
+</script>

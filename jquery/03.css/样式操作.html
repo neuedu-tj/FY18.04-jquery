@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        #img {
+            height: 100px;
+            width: 100px;
+            /*border: 1px solid crimson;*/
+            box-shadow: 0px 0px 10px grey;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100%;
+        }
+
+        .img-normal {
+            background-image: url(../../resources/img/wechat-normal.svg);
+
+        }
+        .img-press {
+            background-image: url(../../resources/img/wechat-press.svg);
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+    <div id="img" class="img-normal"></div>
+
+</body>
+</html>
+
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $(function(){
+
+        $("#img").click(function(){
+            console.log("~~~~~")
+            $(this).toggleClass('img-press')
+        })
+
+
+    })
+
+</script>
