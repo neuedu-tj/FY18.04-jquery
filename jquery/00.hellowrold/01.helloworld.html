@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+
+        .me-class {
+            font-family: 微软雅黑;
+            font-weight: 700;
+            color: crimson;
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <input id="btn" value="click" type="button">
+
+    <hr>
+
+    <div id="show"></div>
+
+
+</body>
+</html>
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+    $(function() {
+
+        $("#btn").click(function() {
+            $("#show").html("哈哈 我出现了......").addClass("me-class").addClass("..")
+        })
+
+    })
+
+
+
+</script>
+
+

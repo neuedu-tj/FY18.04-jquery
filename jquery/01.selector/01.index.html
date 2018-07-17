@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <ul id="u">
+        <li>java</li>
+        <li class="cls">mysql</li>
+        <li class="cls">spark</li>
+        <li class="cls2">vue</li>
+    </ul>
+
+    <hr>
+
+    <input id="name" type="text" value="jquery"><input type="text">
+
+    <br><br>
+
+    <input type="button" value="button">
+
+    <br><br>
+
+    <label><input type="radio" name="gender" value="male">male</label>
+    <label><input type="radio" name="gender" value="female" checked>female</label>
+
+    <br><br>
+
+    <label><input type="checkbox" name="skill" value="java">java</label>
+    <label><input type="checkbox" name="skill" value="css" checked>css</label>
+    <label><input type="checkbox" name="skill" value="spark" >spark</label>
+    <label><input type="checkbox" name="skill" value="redis" checked>redis</label>
+    <label><input type="checkbox" name="skill" value="cloud" >cloud</label>
+
+
+
+</body>
+</html>
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $(function() {
+
+        // $("#u li:nth-child(2n-1)").css('color' , 'red');
+
+        // $(".cls , .cls2 ").css('color','blue')
+
+
+        // $("input[type=button]").css('background-color' , 'red')
+
+        // console.log($("#name").val())
+
+        $("#name").val("springboot")
+
+        $("#u li:first-child").html("javascript....")
+
+
+        //获取被选中的控件值
+        // console.log($("input[name=gender]:checked").val())
+
+        console.log($("input[name=skill]:checked"))
+
+
+
+
+    })
+
+
+</script>
