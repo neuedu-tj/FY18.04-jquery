@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <div id="d1" data-name="tom" data-age="10">info : tom </div>
+
+    <div data-name="jack" data-age="20">info : tom </div>
+    <div data-name="rose" data-age="30">info : tom </div>
+
+
+    <div id="d2" data-img-normal ="normal.jpg" data-img-press="press.jpg">info : tom </div>
+
+</body>
+</html>
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $(function(){
+
+
+        console.log($("#d1").data("age"))
+
+    })
+
+</script>

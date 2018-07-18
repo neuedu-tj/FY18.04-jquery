@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        #container {
+            height: 300px;
+            width: 400px;
+
+            border: red 1px solid;
+
+            overflow: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            min-height: 40px;
+            max-width: 300px;
+
+            background-color: gainsboro;
+            box-shadow: 0px 0px 4px grey;
+
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <input type="text" id="msg">
+    <br>
+    <input type="button" id="btn" value="send">
+    <hr>
+
+    <div id="container">
+
+
+    </div>
+
+</body>
+</html>
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+
+    $(function(){
+
+        $("#btn").click(function(){
+
+
+            var item = $("<div>"+$("#msg").val()+"</div>").addClass("item");
+            var remove = $("<div class=\"remove\">删除</div>");
+
+
+            remove.click(function(){
+                $(this).parent().remove()
+            })
+
+            item.append(remove);
+
+
+            $("#container").prepend(item)
+
+            $("#msg").val("")
+
+        })
+
+
+
+
+    })
+
+
+</script>
